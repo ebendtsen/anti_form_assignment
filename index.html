@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+This form implements the following elements of anti-design:
+- username and password inputs that jump
+- text that is hard to read
+- password must have at least one capital letter and at least one number, but the user is only told this after submission 
+    and must satisfy one requirement at a time to learn the next
+- username must have at least one emoji and contain the word "meow"
+- every 10-20 seconds a paw appears and resets the form
+- a phone number is entered one number at a time
+
+other validation rules:
+- password must be 8 characters minimum
+- username must be 7 characters minimum
+- only username and password are required
+- digits in the phone number must be between 0 and 9
+- email must include an @ sign
+
+After successful submission the users data is printed in the console to show it has been saved.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Emely Bendtsen Anti-Form</title>
+</head>
+
+<body>
+    <h1>Sign up to anime cats club!</h1>
+
+    <img id="catPaw" src="Tan-Cat-Paw-PNG.png">
+
+    <form id="signupForm" class="box spacer bg-image">
+        <section class="row spacer">
+            <fieldset>
+                <div class="spacer">
+                    <h2>User*</h2>
+                    <label for="username">username</label>
+                    <input type="text" id="username" name="username" class="text-input" minlength="7" required>
+                    <div class="warningMessage" id="usernameMessage"></div>
+                </div>
+
+                <div class="spacer">
+                    <label for="password">password</label>
+                    <input type="password" id="password" name="password" class="text-input" minlength="8" required>
+                    <div class="warningMessage" id="passwordMessage"></div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <h2>Personal Info</h2>
+
+                <div class="spacer">
+                    <input type="date" name="birthday" id="birthday">
+                    <label for="birthday">birthday</label>
+                </div>
+
+                <div class="spacer">
+                    <label for="phone">tel</label>
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                    <input type="number" name="phone" max="9" min="0" step="1" class="phonenumber-box" placeholder="0">
+                </div>
+
+                <div class="spacer">
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div class="spacer">
+                    <input name="newsletter" type="checkbox" id="newsletter" checked>
+                    <lable for="newsletter">Sign up for newsletter</lable>
+                </div>
+            </fieldset>
+        </section>
+
+        <section class="row spacer">
+            <button type="reset">Reset</button>
+            <button type="submit">Sign up</button>
+        </section>
+    </form>
+
+    <div id="userMessage" class="box"></div>
+</body>
+
+</html>

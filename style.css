@@ -1,0 +1,104 @@
+* {
+    background-color: blueviolet;
+    cursor: url('Tan-Cat-Paw-PNG.png'), auto;
+    color: plum;
+}
+
+h1, h2, label {
+    background-color: transparent;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: transparent;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 32px;
+    background-color: white;
+}
+
+.bg-image {
+    background-image: url("anime_cat_background.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+fieldset{
+    width: 50vh;
+    border: none;
+    background-color: transparent;
+}
+
+.spacer {
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+    color: purple;
+    background-color: plum;
+    border: 2px solid purple;
+    border-radius: 5px;
+}
+
+input {
+    background-color: lightcyan;
+    margin-bottom: 10px;
+}
+
+.warningMessage {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.text-input {
+    background-color: lightcyan;
+    transition: transform 150ms ease; /* smooth movement */
+    display: inline-block; /* ensure transform works predictably */
+    width: 150px;
+}
+
+.text-input:hover {
+    transform: translateX(+150px); /* move on hover */
+    cursor: pointer;
+}
+
+/* for when input is ok*/
+.text-input:active {
+    background-color: white;
+    flex-grow: 1;
+}
+
+
+.phonenumber-box {
+    width: 25px;
+}
+
+#catPaw, #userMessage {
+    display: none;
+}
+
+#catPaw {
+    background-color: transparent;
+    transition: transform 2000ms ease;
+}
