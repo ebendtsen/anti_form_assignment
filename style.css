@@ -1,5 +1,6 @@
 * {
     background-color: blueviolet;
+    /*decorative cursor by JamKats*/
     cursor: url('Tan-Cat-Paw-PNG.png'), auto;
     color: plum;
 }
@@ -30,6 +31,7 @@ body {
 }
 
 .bg-image {
+    /*background image is decorative, change as you like*/
     background-image: url("anime_cat_background.jpg");
     background-size: cover; 
     background-repeat: no-repeat; 
